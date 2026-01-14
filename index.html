@@ -1,39 +1,77 @@
 <!doctype html>
 <html lang="en-NZ">
-   <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Heathvale Orchards | Seasonal Plums</title>
-      <meta name="description" content="Heathvale Orchards is a small family-run orchard in Heathcote, Christchurch, growing seasonal plum varieties available for pickup during the harvest season." />
-      <meta name="robots" content="index, follow" />
-      <link rel="icon" href="favicon.ico" type="image/x-icon">
-      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-      <link rel="stylesheet" href="style.css" />
-      <meta name="keywords" content="plums Heathcote, plums Christchurch, Heathvale Orchards, seasonal plums NZ, Shiro plums, Black Doris plums, orchard Heathcote" />
-      <link rel="canonical" href="https://NicoleBenfell.github.io/heathvale-orchards/" />
-      <script type="application/ld+json">
-         {
-           "@context": "https://schema.org",
-           "@type": "Farm",
-           "name": "Heathvale Orchards",
-           "address": {
-         	"@type": "PostalAddress",
-         	"streetAddress": "112 Bridle Path Road",
-         	"addressLocality": "Heathcote",
-         	"addressRegion": "Canterbury",
-         	"addressCountry": "NZ"
-           },
-           "telephone": "+64 28 850 1590",
-           "description": "Small family-run orchard in Heathcote, Christchurch growing seasonal plum varieties available for pickup.",
-           "makesOffer": {
-         	"@type": "Offer",
-         	"price": "5.00",
-         	"priceCurrency": "NZD",
-         	"unitText": "per kg"
-           }
-         }
-      </script>
-   </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Heathvale Orchards (Heathcote) | Seasonal Plums</title>
+  <meta name="description" content="Heathvale Orchards is a small family-run orchard in Heathcote, Christchurch offering seasonal plums for pickup during harvest season. $5 per kg. Pickup 1pm–7pm or by arrangement." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#2f3a2f" />
+
+  <link rel="canonical" href="https://nicolebenfell.github.io/heathvale-orchards/" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Social preview (Open Graph) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Heathvale Orchards - Plums in Christchurch (Heathcote)" />
+  <meta property="og:description" content="Family-run orchard in Heathcote, Christchurch. Seasonal plums for pickup. $5 per kg. Pickup 1pm–7pm or by arrangement." />
+  <meta property="og:url" content="https://nicolebenfell.github.io/heathvale-orchards/" />
+  <meta property="og:image" content="https://nicolebenfell.github.io/heathvale-orchards/images/plums-mixed.png" />
+  <meta property="og:locale" content="en_NZ" />
+
+  <!-- Twitter (works for many platforms too) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Heathvale Orchards - Plums in Christchurch" />
+  <meta name="twitter:description" content="Seasonal plums for pickup in Heathcote, Christchurch. $5 per kg. Pickup 1pm–7pm or by arrangement." />
+  <meta name="twitter:image" content="https://nicolebenfell.github.io/heathvale-orchards/images/plums-mixed.png" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Heathvale Orchards",
+    "url": "https://nicolebenfell.github.io/heathvale-orchards/",
+    "telephone": "+64288501590",
+    "image": [
+      "https://nicolebenfell.github.io/heathvale-orchards/images/plums-yellow.jpeg",
+      "https://nicolebenfell.github.io/heathvale-orchards/images/plums-purple.jpeg",
+      "https://nicolebenfell.github.io/heathvale-orchards/images/plums-mixed.png"
+    ],
+    "description": "Small family-run orchard in Heathcote, Christchurch offering seasonal plum varieties for pickup during harvest season. $5 per kg.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "112 Bridle Path Road",
+      "addressLocality": "Heathcote",
+      "addressRegion": "Canterbury",
+      "addressCountry": "NZ"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "13:00",
+        "closes": "19:00"
+      }
+    ],
+    "areaServed": "Christchurch",
+    "makesOffer": {
+      "@type": "Offer",
+      "price": "5.00",
+      "priceCurrency": "NZD",
+      "description": "Plums - $5 per kg (pickup only, seasonal availability)."
+    }
+  }
+  </script>
+</head>
+
    <body>
       <header class="site-header">
          <div class="wrap header-inner">
@@ -46,14 +84,13 @@
             </a>
             <nav class="nav" aria-label="Site navigation">
                <a href="#about">About</a>
-               <a href="#varieties">Plum varieties</a>
+               <a href="#varieties">Plum Varieties</a>
                <a href="#photos">Photos</a>
                <a href="#visit">Visit</a>
             </nav>
          </div>
       </header>
       <main id="top">
-         <!-- HERO -->
          <section class="hero">
             <div class="wrap hero-grid">
                <div class="hero-text">
@@ -75,8 +112,6 @@
                      </div>
                   </div>
                </div>
-               <!-- Keep as-is if you have images/hero.jpg.
-                  If you don't, change the filename in style.css. -->
                <div class="hero-image" aria-label="Orchard entrance"></div>
             </div>
          </section>
@@ -84,15 +119,18 @@
             <h2>Key information</h2>
             <div class="info-grid">
                <div class="info-card">
-                  <h3>Pricing</h3>
-                  <p><strong>$5 per kg</strong></p>
-                  <p class="muted">Price applies to all available plum varieties.</p>
-               </div>
+				  <h3>Pricing</h3>
+				  <p><strong>$5 per kg</strong></p>
+				  <p class="muted">
+					Price applies to all available plum varieties.  
+					Special pricing may apply for large orders - please get in touch to discuss.
+				  </p>
+				</div>
                <div class="info-card">
                   <h3>Pickup hours</h3>
                   <p><strong>1pm – 7pm</strong></p>
                   <p class="muted">
-                     Or by prior arrangement — please call or text if you’d like to collect outside these hours.
+                     Or by prior arrangement - please call or text if you’d like to collect outside these hours.
                   </p>
                </div>
                <div class="info-card">
