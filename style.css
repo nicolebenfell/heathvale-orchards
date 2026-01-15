@@ -167,7 +167,7 @@ a:hover{ text-decoration:underline; }
   box-shadow: var(--shadow);
   background:
     linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,0)),
-    url("images/hero.png") center/cover no-repeat;
+    url("images/heathcote-heathvale-orchards-main-photo.png") center/cover no-repeat;
   min-height: 320px;
 }
 
