@@ -298,3 +298,114 @@ iframe{
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   font-size: 15px;
 }
+
+
+ /* --- Carousel styles --- */
+    /* Keep using the same section width + sizing as before by reusing .gallery */
+    #photos .gallery {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Track slides horizontally */
+    #photos .carousel-track {
+      display: flex;
+      transition: transform 0.35s ease;
+      will-change: transform;
+    }
+
+    /* One slide visible at a time */
+    #photos .carousel-slide {
+      min-width: 100%;
+    }
+
+    /* Keep image sizing "as before":
+       - width: 100% keeps within the old photo container width
+       - height: auto keeps natural proportions (same as old)
+    */
+    #photos .carousel-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Buttons */
+    #photos .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.55);
+      color: #fff;
+      font-size: 22px;
+      line-height: 1;
+      display: grid;
+      place-items: center;
+    }
+    #photos .carousel-btn:hover { background: rgba(0,0,0,0.75); }
+    #photos .carousel-btn.prev { left: 10px; }
+    #photos .carousel-btn.next { right: 10px; }
+
+    /* Dots (optional but nice) */
+    #photos .carousel-dots {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 12px;
+    }
+    #photos .carousel-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: rgba(0,0,0,0.25);
+    }
+    #photos .carousel-dot[aria-current="true"] {
+      background: rgba(0,0,0,0.7);
+    }
+
+    /* Reduce motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      #photos .carousel-track { transition: none; }
+    }
+	
+	/* --- Smooth continuous scrolling photo strip (marquee) --- */
+#photos .gallery.marquee {
+  overflow: hidden;
+}
+
+/* Track contains two identical sets of images */
+#photos .marquee-track {
+  display: flex;
+  gap: 16px; /* adjust spacing between images */
+  width: max-content;
+  animation: plums-marquee 35s linear infinite;
+  will-change: transform;
+}
+
+/* Each item keeps your existing .photo sizing */
+#photos .marquee-item {
+  flex: 0 0 auto;
+}
+
+/* Pause on hover (nice on desktop) */
+#photos .gallery.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Respect reduced-motion users */
+@media (prefers-reduced-motion: reduce) {
+  #photos .marquee-track {
+    animation: none;
+  }
+}
+
+@keyframes plums-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
